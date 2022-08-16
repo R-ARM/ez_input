@@ -72,7 +72,7 @@ impl RinputerHandle {
                         let val = ev.value() != 0;
                         match key {
                             Key::BTN_NORTH  => return Ok(EzEvent::North(val)),
-                            Key::BTN_SOUTH  => return Ok(EzEvent::North(val)),
+                            Key::BTN_SOUTH  => return Ok(EzEvent::South(val)),
                             Key::BTN_EAST   => return Ok(EzEvent::East(val)),
                             Key::BTN_WEST   => return Ok(EzEvent::West(val)),
                             Key::BTN_TR     => return Ok(EzEvent::R(val)),
