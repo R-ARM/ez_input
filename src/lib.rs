@@ -54,9 +54,9 @@ fn adc(val: i32, deadzone_min: i32, press: &mut bool, less: EzEvent, more: EzEve
 impl RinputerHandle {
     pub fn open() -> Option<RinputerHandle> {
         for candidate in evdev::enumerate() {
-            if candidate.1.input_id().version() == 0x2137 {
+            if candidate.input_id().version() == 0x2137 {
                 return Some(RinputerHandle {
-                    evdev_device: candidate.1,
+                    evdev_device: candidate,
                     pressed_leftright: false,
                     pressed_updown: false,
                 });
