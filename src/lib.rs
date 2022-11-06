@@ -179,6 +179,10 @@ impl AnyHandle {
                             Key::BTN_TL     => return Some(EzEvent::L(val)),
                             Key::BTN_START  => return Some(EzEvent::Start(val)),
                             Key::BTN_SELECT => return Some(EzEvent::Select(val)),
+                            Key::BTN_DPAD_UP    => return Some(EzEvent::DirectionUp),
+                            Key::BTN_DPAD_DOWN  => return Some(EzEvent::DirectionDown),
+                            Key::BTN_DPAD_LEFT  => return Some(EzEvent::DirectionLeft),
+                            Key::BTN_DPAD_RIGHT => return Some(EzEvent::DirectionRight),
                             _ => continue,
                         }
                     },
